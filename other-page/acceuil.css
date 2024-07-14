@@ -24,7 +24,7 @@ main {
    display: flex;
 }
 main section {
-   background-color: grey;
+   background-color: #009e7752;
 }
 main section:nth-child(1) {
    width: 25%;
@@ -48,12 +48,17 @@ main section:nth-child(1) div img{
 .section-1 div:nth-child(2){
    background-color: #009e76;
    width: 80%;
-   margin: auto;
-   padding: 10px auto;
+   height: 30px;
+   margin: 15px auto !important;
+   padding-top: 3px;
    border-radius: 6px;
    text-align: center;
    font-size: 20px;
    color: var(--color4);
+   cursor: grab;
+}
+.section-1 div:nth-child(2):hover {
+   background-color: var(--color6);
 }
 main section:nth-child(2) {
    width: 75%;
@@ -71,30 +76,42 @@ main section:nth-child(2) {
    margin-left: 1px;
 }
 .section-1 div:nth-child(3) ul{
-   margin-top: 20px;
+   margin-top: 40px;
 }
 .section-1 div:nth-child(3) ul li{
    list-style: none;
    padding: 8px 20px;
+   transition: 0.3s ease-in-out;
+}
+.section-1 div:nth-child(3) ul li:hover{
+   background-color: var(--color6);
+   color: white !important;
 }
 .section-1 div:nth-child(3) ul li a{
    text-decoration: none;
    color: black;
 }
+
 .section-1 div:nth-child(3) ul li i{
-   font-size: 25px;
+   font-size: 22px;
+   color: var(--color3);
 }
 .section-1 div:nth-child(3) ul span{
    margin-left: 15px;
 }
+.style-foot{
+   width: 100%;
+   height: 20%;
+}
 #container-section {
-   margin: 10px;
+   margin: 1px;
    max-width: auto;
    overflow-y: auto;
    overflow-x: hidden;
+   background-image: linear-gradient(120deg,#84fab0 0%,#8fd3f4 100%);
 }
 #container-section h1{
-   color: white;
+   color: black;
    transform: translateX(60px);
 }
 #container-section h1::after{
@@ -113,20 +130,65 @@ main section:nth-child(2) {
    display: block;
    transform: translate(-40px, 16px);
 }
-#acceuil{
+#container-1{
    display: flex;
-   background-color: rgb(128, 128, 128) !important;
+   background-color: transparent;
    justify-content: space-between;
 }
-#acceuil section {
+#container-1 section {
    width: 33%;
    height: 250px;
    background-color: white;
    margin: 5PX;
    border-radius: 6px;
+   padding: 5px;
 }
-#acceuil section:nth-child(3) {
+#container-1 section:nth-child(3) {
    height: 150px;
+}
+#container-1 h4{
+   color: var(--color3);
+   font-size: 16px;
+}
+#acceuil   div {
+   width: 80% !important;
+   margin: 12px auto !important;
+}
+#acceuil div p{
+   margin-bottom: 5px;
+}
+#acceuil  div a{
+   text-decoration: none;
+   color: white;
+   background-color: var(--color6);
+   padding: 4px 10px;
+   border-radius: 8px;
+}
+.meilleur-cours {
+   padding: 5px;
+}
+.meilleur-cours div{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 5px;
+}
+.meilleur-cours div div{
+   background-color: grey !important;
+   color: white;
+   flex-basis: 20%;
+   text-align: center !important;
+   font-size: 14px;
+   padding: 2px;
+}
+.ajout-cours div,.ajout-cours a{
+   margin: 5px;
+}
+.ajout-cours a{
+   text-decoration: none;
+   color: white;
+   background-color: var(--color6);
+   padding: 4px 10px;
+   border-radius: 8px;
 }
 ::-webkit-scrollbar {
    width: 20px;
@@ -153,5 +215,8 @@ main section:nth-child(2) {
       width: 100%;
       height: 100vh;
       margin: 0;
+   }
+   .style-foot{
+       height: 32.5%;
    }
 }
