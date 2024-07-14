@@ -26,13 +26,23 @@ main {
    position: relative;
    box-shadow: 2px 6px 10px rgb(71, 93, 73);
 }
+
 main section{
    transition: 0.2s ease-in-out;
 }
 main section:nth-child(1) {
    width: 20% !important;
    background-color: var(--color4);
+   animation: sidebar 0.1s ease-in;
 }
+@keyframes sidebar {
+  0%{
+   transform: translateY(-40px);
+  } 
+  100%{
+   transform: translateX(-100px);
+  }
+} 
 main section:nth-child(2) {
    width: 80% ;
 }
@@ -100,7 +110,10 @@ input{
    text-decoration: none;
    color: black;
 }
+.fa-close{
+   display: none !important;
 
+}
 .section-1 div:nth-child(3) ul li i{
    font-size: 22px;
    color: var(--color3);
@@ -396,5 +409,53 @@ video{
    }
    .style-foot{
        height: 32.5%;
+   }
+}
+@media screen and (max-width: 700px) {
+   main > section:nth-child(1) {
+   position: absolute !important;
+   top: 0;
+   width: 100vw !important;
+   height: 100%;
+   left: 0;
+   display: block;
+   z-index: 4;
+   display: none;
+   overflow-x: hidden !important;
+   }
+   main > section:nth-child(2){
+      width: 100%;
+   }
+   .fa-close{
+      position: absolute;
+      top: 10px;
+      right: 30px;
+      font-size: 30px;
+      color: var(--color7);
+      cursor: grab;
+      display: block !important;
+   }
+   .fa-close:hover{
+      opacity: 0.8;
+   }
+   .nav-bar div:nth-child(1){
+      width: 60vw !important;
+   }
+   #container-1 {
+      flex-wrap: wrap ;
+      display: inline;
+   }
+   #container-1 section{
+      width: 90% !important;
+      padding: 20px;
+      margin: 10px auto;
+   }
+   #Billet-entrer{
+      display: block; 
+      width: 99%;
+      margin: auto !important;
+   }
+   #Billet-entrer > div {
+      margin-left: 5vw !important;
    }
 }

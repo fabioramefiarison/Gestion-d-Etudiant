@@ -5,6 +5,7 @@ function Get(params) {
 const btnMenu = Get('menu-burger')
 const sideBar = Get("side-bar")
 const section2  = Get("section-2")
+const close = Get("close")
 
 let estVisible = true
 btnMenu.addEventListener('click', () =>{
@@ -18,6 +19,10 @@ btnMenu.addEventListener('click', () =>{
    estVisible = !estVisible
 })
 
+close.addEventListener('click', () =>{
+  sideBar.style.display = "none"
+  section2.style.width = "100%"
+})
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
