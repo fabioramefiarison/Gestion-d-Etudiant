@@ -10,7 +10,7 @@ let estVisible = true
 btnMenu.addEventListener('click', () =>{
    if (estVisible) {
       sideBar.style.display = "block"
-      section2.style.width = "75%"
+      section2.style.width = "80%"
    } else {
       sideBar.style.display = "none"
       section2.style.width = "100%"
