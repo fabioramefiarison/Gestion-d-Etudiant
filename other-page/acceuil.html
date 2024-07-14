@@ -9,8 +9,8 @@
 </head>
 <body>
    <main>
-      <section class="section-1">
-         <div>
+      <section class="section-1" id="side-bar">
+         <div >
             <img src="../contenu/images/sideimg.png" alt="">
             <h2>Rakoto oa</h2>
             <p>Administrateur</p>
@@ -32,10 +32,10 @@
       <section id="section-2">
          <div class="nav-bar">
                <div>
-                  <input type="search" name="" id="" placeholder="Rechercher">
+                 <H1>GESTION D'ETUDIANT</H1>
                </div>
             <div>
-               <i class="fas fa-bars"></i>
+               <i class="fas fa-bars" id="menu-burger"></i>
                <i class="fa-regular fa-sun"></i>
                <i class="fa-solid fa-moon" style="display: none;"></i>
                <i class="fas fa-user"></i>
@@ -72,6 +72,7 @@
             <h1 class="liste-etud">Liste des étudiant</h1>
             <div id="container-2">
                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher nom de l'étudiant.." title="Type in a name">
+               <span class="btn-ajouter">AJOUTER</span>
                <table id="myTable">
                  <tr class="header">
                       <th style="width: 35%;">Nom</th>
@@ -168,15 +169,15 @@
                      <table>
                         <tr>
                            <td><label for="nom">Nom :</label></td>
-                           <td><input type="text" name="" id="nom"></td>
+                           <td><input type="text" name="" id="nom" placeholder="son nom .."></td>
                         </tr>
                         <tr>
                            <td><label for="prenom">Prenom :</label></td>
-                           <td><input type="text" name="" id="prenom"></td>
+                           <td><input type="text" name="" id="prenom" placeholder="son prenom .."></td>
                         </tr>
                         <tr>
                            <td><label for="classe">Classe :</label></td>
-                           <td><input type="text" name="" id="classe"></td>
+                           <td><input type="text" name="" id="classe" placeholder="sa classe .."></td>
                         </tr>
                      </table>
                   </div>
@@ -184,7 +185,7 @@
                      <table>
                         <tr>
                            <td><label for="motif">Motif :</label></td>
-                           <td><input type="text" name="" id="motif" style="width: 120%;;height: 120px;"></td>
+                           <td><input type="text" name="" id="motif" placeholder="Motif bien détaillée .." style="width: 120%;;height: 120px;"></td>
                         </tr>
                         <tr>
                            <td><button id="btn-imprimer">IMPRIMER</button></td>
@@ -193,6 +194,22 @@
                   </div>
             </div>
                <h1>COURS</h1>
+               <div id="cours">
+                  <section>
+                     <p>AJOUTER</p>
+                    <video src="../contenu/video/Apprendre le PHP Chapitre 1, Présentation de PHP.mp4" controls width="300" height="150"></video>    
+                  </section>
+                  <section>
+                     <div>
+                        <div><img src="../contenu/images/sideimg.png" alt=""></div>
+                        <div>
+                           <h4>MR Tina</h4>
+                           <p><i>04/05/2024</i></p>
+                        </div>
+                     </div>
+                     <p class="txt-video">Cette vidéo concernant les fondamentaux su PHP, 25 vidéo open source</p>
+                  </section>
+               </div>
             </div>
          </div>
          <div></div>
