@@ -47,7 +47,7 @@ main section:nth-child(1) div img{
    color: var(--color6);
 }
 .section-1 div:nth-child(2){
-   background-color: #009e76;
+   background-color: var(--color7);
    width: 80%;
    height: 30px;
    margin: 15px auto !important;
@@ -164,6 +164,9 @@ main section:nth-child(2) {
 .liste-etud::after{
    transform: translate(230px, -16px) !important;
 }
+#Billet-entrer-h1::after{
+   transform: translate(180px, -16px) !important;
+}
 #container-1{
    display: flex;
    background-color: transparent;
@@ -199,6 +202,9 @@ main section:nth-child(2) {
    border-radius: 8px;
    font-size: 14px;
 }
+#acceuil div a:hover{
+   opacity: 0.8;
+}
 .meilleur-cours {
    padding: 5px;
 }
@@ -208,12 +214,12 @@ main section:nth-child(2) {
    margin: 5px;
 }
 .meilleur-cours div div{
-   background-color: grey !important;
-   color: white;
+   background-color: rgba(128, 128, 128, 0.405) !important;
+   color: rgb(0, 0, 0);
    flex-basis: 20%;
    text-align: center !important;
    font-size: 14px;
-   padding: 2px;
+   padding: 2px 5px;
 }
 .ajout-cours div,.ajout-cours a{
    margin: 5px;
@@ -238,6 +244,7 @@ main section:nth-child(2) {
    border: 1px solid #ddd;
    margin-bottom: 12px;
    outline: none;
+   border-radius: 6px;
  }
  
  #myTable {
@@ -251,6 +258,7 @@ main section:nth-child(2) {
    text-align: left;
    padding: 12px;
    color: var(--color3);
+   border-radius: 6px;
  }
  #myTable td{
    color: black;
@@ -258,10 +266,49 @@ main section:nth-child(2) {
  #myTable tr {
    border-bottom: 1px solid #ddd;
  }
- 
+ #myTable i{
+   cursor: grab;
+   transition: 0.2s ease;
+ }
+ #myTable i:hover{
+   font-size: 20px;
+   opacity: 0.7;
+ }
  #myTable tr.header, #myTable tr:hover {
    background-color: #f1f1f1;
  }
+/*************Billet d'entrée****/
+#Billet-entrer{
+   display: flex;
+   margin: 5px;
+   padding: 5px;
+   justify-content: space-evenly;
+   background-color: white;
+   border-radius: 6px;
+}
+#Billet-entrer td{
+   height: 60px;
+}
+#Billet-entrer input{
+   height: 70%;
+   border: 1px solid var(--color3);
+   border-radius: 6px;
+}
+#btn-imprimer{
+   background-color: var(--color7);
+   width: 110px;
+   height: 30px;
+   border: none;
+   color: white;
+   font-size: 20px;
+   border-radius: 6px;
+   transform: translateX(100%);
+   cursor: grab;  
+   transition: 0.3s ease-in-out;
+}
+#btn-imprimer:hover{
+   box-shadow: 1px 5px 5px gray;
+}
 ::-webkit-scrollbar {
    width: 20px;
  }
