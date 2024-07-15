@@ -67,15 +67,21 @@ btnValider.addEventListener("click", (e)=>{
   const prenomEtud = Get("prenom-etud").value
   const classeEtud = Get("classe-etud").value
   const MatriculeEtud = Get("Filiere-etud").value
-  const nouvelleLigne = myTable.insertRow()
-  const nouvelleCelluleNom = nouvelleLigne.insertCell()
-  const nouvelleCellulePrenom = nouvelleLigne.insertCell()
-  const nouvelleCelluleClasse = nouvelleLigne.insertCell()
-  const nouvelleCelluleMatricule = nouvelleLigne.insertCell()
-  nouvelleCelluleNom.textContent = nomEtud
-  nouvelleCellulePrenom.textContent = prenomEtud
-  nouvelleCelluleClasse.textContent = classeEtud
-  nouvelleCelluleMatricule.textContent = MatriculeEtud
+  if (nomEtud != null && prenomEtud!= null && classeEtud!= null && MatriculeEtud!= null) {
+    const nouvelleLigne = myTable.insertRow()
+    const nouvelleCelluleNom = nouvelleLigne.insertCell()
+    const nouvelleCellulePrenom = nouvelleLigne.insertCell()
+    const nouvelleCelluleClasse = nouvelleLigne.insertCell()
+    const nouvelleCelluleMatricule = nouvelleLigne.insertCell()
+    const nouvelleCelluleControl = nouvelleLigne.insertCell() 
+    nouvelleCelluleNom.textContent = nomEtud
+    nouvelleCellulePrenom.textContent = prenomEtud
+    nouvelleCelluleClasse.textContent = classeEtud
+    nouvelleCelluleMatricule.textContent = MatriculeEtud
+    nouvelleCelluleControl.innerHTML = "<i class='fa-solid fa-pen-to-square' style='color: green;'></i><i class='fa-solid fa-trash' style='color: red;'></i>" 
+    inputAjout.classList.remove('inputAddAjout')
+  }
+
  })
 const btnAnnuler = document.querySelector(".btn-annuler")
 btnAnnuler.addEventListener("click" , ()=>{
