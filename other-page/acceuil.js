@@ -43,7 +43,7 @@ close.addEventListener('click', () =>{
   sideBar.style.display = "none"
   section2.style.width = "100%"
 })
-console.log(ulSides);
+
 ulSides.forEach(element => {
   element.addEventListener('click', () =>{
     sideBar.style.display = "none"
@@ -51,6 +51,14 @@ ulSides.forEach(element => {
   })
 });
 
+//déconnexion
+/*const Deconnexion = Get("deconnexion")
+const Main = document.querySelector("main")
+  Deconnexion.addEventListener("click", ()=>{
+  const divDECONN = document.createElement("div")
+  Main.appendChild(divDECONN)
+  divDECONN.innerHTML = "Vous voulez de connecter"
+})*/
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
