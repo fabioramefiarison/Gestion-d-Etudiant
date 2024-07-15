@@ -106,3 +106,49 @@ function myFunction() {
     }       
   }
 }
+
+/*note*/
+function limitInput(input) {
+  // Limite le nombre de caractères à 2
+          if (input.value.length > 2) {
+              input.value = input.value.slice(0, 2);
+          }
+  // Limite la valeur à 20
+          if (parseInt(input.value) > 20) {
+              input.value = 20;
+          }
+      }
+      document.getElementById('notesForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nom = document.getElementById('nom').value;
+        const classe = document.getElementById('classe').value;
+        const matricule = document.getElementById('matricule').value;
+        const mvc = document.getElementById('mvc').value;
+        const ts = document.getElementById('ts').value;
+        const java = document.getElementById('java').value;
+        const elec = document.getElementById('elec').value;
+        const iart = document.getElementById('iart').value;
+        const devops = document.getElementById('devops').value;
+        const csharp = document.getElementById('csharp').value;
+        const is = document.getElementById('is').value;
+        
+        const listContainer = document.getElementById('listContainer');
+        const notesList = document.getElementById('notesList');
+        
+        notesList.innerHTML = `
+            <li>Nom : ${nom}</li>
+            <li>Classe : ${classe}</li>
+            <li>Matricule : ${matricule}</li>
+            <li>Structures MVC : ${mvc}/20</li>
+            <li>Typescript : ${ts}/20</li>
+            <li>Java : ${java}/20</li>
+            <li>Electronique : ${elec}/20</li>
+            <li>Intelligence Artificielle : ${iart}/20</li>
+            <li>DevOps : ${devops}/20</li>
+            <li>C# : ${csharp}/20</li>
+            <li>Info Scientifique : ${is}/20</li>
+        `;
+        
+        listContainer.style.display = 'block';
+    });

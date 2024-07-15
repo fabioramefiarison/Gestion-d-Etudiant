@@ -33,7 +33,7 @@
       <section id="section-2">
          <div class="nav-bar">
                <div>
-                 <H1 >GESTION D'ETUDIANT</H1>
+                 <H1 class="glow">GESTION D'ETUDIANT</H1>
                </div>
             <div>
                <i class="fas fa-bars" id="menu-burger"></i>
@@ -257,20 +257,80 @@
                       <input type="number" id="is" name="is" min="0" maxlength ="2" placeholder="/20" oninput="limitInput(this)" required>
           
                       <input type="submit" value="Envoyer">
-          
-                      <script>
-                          function limitInput(input) {
-                      // Limite le nombre de caractères à 2
-                              if (input.value.length > 2) {
-                                  input.value = input.value.slice(0, 2);
-                              }
-                      // Limite la valeur à 20
-                              if (parseInt(input.value) > 20) {
-                                  input.value = 20;
-                              }
-                          }
-                      </script>
                   </form>
+              </div>
+              <div class="list-container" id="listContainer">
+               <h3>Listes des notes soumises</h3>
+               <ul id="notesList"></ul>
+           </div>
+              <H1 class="h1-edt">Emploi du temps</H1>
+              <div id="EDT" class="boxy">
+               <section>
+                  <div>
+                     <h3>Emploi du temps</h3>
+                     <p>Semaine de : <input type="text" name="" id=""></p>
+                  </div>
+                  <div><span>Notes:</span> <input type="text" name="" id=""></div>
+               </section>
+               <section>
+                  <table class="center" id="table-edt">
+                       <tr>
+                        <th></th>
+                         <th>Lundi</th>
+                         <th>Mardi</th> 
+                         <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                       </tr>
+                       <tr>
+                         <td>07:30</td>
+                         <td><input type="text" name="" id=""></td>
+                         <td><input type="text" name="" id=""></td>
+                         <td><input type="text" name="" id=""></td>
+                         <td><input type="text" name="" id=""></td>
+                         <td><input type="text" name="" id=""></td>
+                         <td><input type="text" name="" id=""></td>
+                       </tr>
+                       <tr>
+                            <td>09:30</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                       </tr>
+                       <tr>
+                            <td>11:30</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                       </tr>
+                       <tr>
+                            <td>13:30</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                       </tr>
+                       <tr>
+                            <td>15:30</td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                            <td><input type="text" name="" id=""></td>
+                       </tr>
+                     
+                     </table>
+               </section>
               </div>
             </div>
          </div>
