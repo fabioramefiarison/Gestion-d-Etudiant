@@ -2,10 +2,30 @@ function Get(params) {
    return document.getElementById(params)
 }
 
+/****** Animation d'apparition */
+const boxes = document.querySelectorAll('.boxy');
+const containerSection = Get("container-section")
+const checkBoxes = () => {
+    const triggerBottom = window.innerHeight / 6 * 4;
+  console.log(triggerBottom);
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+
+        if(boxTop < triggerBottom) {
+            box.classList.add('show');
+        } else {
+            box.classList.remove('show');
+        }
+    });
+}
+containerSection.addEventListener('scroll', checkBoxes);
+checkBoxes(); 
+
 const btnMenu = Get('menu-burger')
 const sideBar = Get("side-bar")
 const section2  = Get("section-2")
 const close = Get("close")
+const ulSides = document.querySelectorAll(".ul-side")
 
 let estVisible = true
 btnMenu.addEventListener('click', () =>{
@@ -23,6 +43,14 @@ close.addEventListener('click', () =>{
   sideBar.style.display = "none"
   section2.style.width = "100%"
 })
+console.log(ulSides);
+ulSides.forEach(element => {
+  element.addEventListener('click', () =>{
+    sideBar.style.display = "none"
+    section2.style.width = "100%"
+  })
+});
+
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");

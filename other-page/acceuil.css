@@ -30,17 +30,18 @@ main {
 main section{
    transition: 0.2s ease-in-out;
 }
-main section:nth-child(1) {
+main > section:nth-child(1) {
    width: 20% !important;
    background-color: var(--color4);
-   animation: sidebar 0.1s ease-in;
+   animation: sidebar 0.2s ease-in;
 }
 @keyframes sidebar {
   0%{
-   transform: translateY(-40px);
+   z-index: -1;
+   opacity: 0;
   } 
   100%{
-   transform: translateX(-100px);
+   opacity: 1;
   }
 } 
 main section:nth-child(2) {
@@ -125,6 +126,9 @@ input{
    padding: 5px 10px;
    display: flex;
    justify-content: space-between;
+}
+.nav-bar i:hover{
+   color: var(--color6);
 }
 .nav-bar div:nth-child(1) {
    width: 50%;
@@ -384,7 +388,16 @@ video{
 ::-webkit-scrollbar {
    width: 20px;
  }
- 
+ /* animation d'apparition*/
+ .boxy {
+    opacity: 0 !important;
+    transform: translateY(80px) !important;
+    transition: all 0.5s ease-in-out !important;
+}
+.boxy.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
  /* Track */
  ::-webkit-scrollbar-track {
    box-shadow: inset 0 0 5px grey; 
@@ -439,7 +452,9 @@ video{
       opacity: 0.8;
    }
    .nav-bar div:nth-child(1){
-      width: 60vw !important;
+      width: 50vw !important;
+      font-size: 2.5vw;
+      height: 40px;
    }
    #container-1 {
       flex-wrap: wrap ;
@@ -457,5 +472,14 @@ video{
    }
    #Billet-entrer > div {
       margin-left: 5vw !important;
+   }
+#cours  section{
+      display: block !important;
+      margin: 5px auto !important;
+      width: 99% !important;
+      height: 180px;
+   }
+.txt-video {
+      margin-top: -40px !important;
    }
 }
