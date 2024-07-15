@@ -51,14 +51,24 @@ ulSides.forEach(element => {
   })
 });
 
-//déconnexion
-/*const Deconnexion = Get("deconnexion")
-const Main = document.querySelector("main")
-  Deconnexion.addEventListener("click", ()=>{
-  const divDECONN = document.createElement("div")
-  Main.appendChild(divDECONN)
-  divDECONN.innerHTML = "Vous voulez de connecter"
-})*/
+//ajout étudiant 
+const btnAjouter = Get("btn-ajouter")
+const myTable = document.querySelector(".myTable")
+const inputAjout = document.querySelector(".input-ajout")
+btnAjouter.addEventListener("click", ()=>{
+      inputAjout.classList.add('inputAddAjout')
+})
+const btnValider = document.querySelector(".btn-valider")
+btnValider.addEventListener("click", ()=>{
+  /*const displayInput = document.createElement("div")
+  myTable.appendChild(displayInput)
+  displayInput.innerHTML = ""*/
+})
+const btnAnnuler = document.querySelector(".btn-annuler")
+btnAnnuler.addEventListener("click" , ()=>{
+  inputAjout.classList.remove('inputAddAjout')
+})
+//"<tr class='header'><th style='width: 35%;'>Nom</th><th style='width: 25%;'>Prénom</th><th style='width: 15%;'>Classe</th><th style='width: 15%;'>Matricule</th><th style='width: 10%;'></th></tr>"
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");

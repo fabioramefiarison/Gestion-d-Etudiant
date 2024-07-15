@@ -11,7 +11,7 @@
    <main>
       <section class="section-1" id="side-bar">
          <div >
-            <img src="../contenu/images/sideimg.png" alt="">
+            <img src="../contenu/images/users.jpg" alt="">
             <h2>Rakoto oa</h2>
             <p>Administrateur</p>
          </div>
@@ -49,6 +49,7 @@
          </div>
          <div id="container-section">
             <h1>Acceuil</h1>
+            
             <div id="container-1" class="boxy">
                <section id="acceuil" >
                   <h4>Nombre d'étudiant & des proffesseur</h4>
@@ -78,7 +79,7 @@
             <h1 class="liste-etud">Liste des étudiant</h1>
             <div id="container-2" class="boxy">
                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher nom de l'étudiant.." title="Type in a name">
-               <span class="btn-ajouter">AJOUTER</span>
+               <span class="btn-ajouter" id="btn-ajouter">AJOUTER</span>
                <table id="myTable">
                  <tr class="header">
                       <th style="width: 35%;">Nom</th>
@@ -219,6 +220,38 @@
             </div>
          </div>
          <div></div>
+         <div id="Billet-entrer" class="boxy input-ajout">
+            <div>
+               <table>
+                  <tr>
+                     <td><label for="nom">Nom :</label></td>
+                     <td><input type="text" name="" id="nom" placeholder="son nom .."></td>
+                  </tr>
+                  <tr>
+                     <td><label for="prenom">Prenom :</label></td>
+                     <td><input type="text" name="" id="prenom" placeholder="son prenom .."></td>
+                  </tr>
+                  <tr>
+                     <td><label for="classe">Classe :</label></td>
+                     <td><input type="text" name="" id="classe" placeholder="sa classe .."></td>
+                  </tr>
+               </table>
+            </div>
+            <div>
+               <table>
+                  <tr>
+                     <td><label for="motif">Filière :</label></td>
+                     <td><input type="text" name="" id="motif" class="Filiere" placeholder="Motif bien détaillée .." style="width: 120%;;height: 120px;"></td>
+                  </tr>
+                  <tr>
+                     <td><button id="btn-imprimer" class="btn-valider">valider</button></td>
+                  </tr>
+                  <tr>
+                     <td><button id="btn-imprimer" class="btn-annuler">annuler</button></td>
+                  </tr>
+               </table>
+            </div>
+      </div>
       </section>
    </main>
    <script src="acceuil.js"></script>

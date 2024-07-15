@@ -1,8 +1,11 @@
+@font-face {
+   font-family: "ChelseaMarket-Regular";
+   src: url("../Inscription/fonts/muli/Muli-Regular.ttf"); }
 *{
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family:  tahoma, sans-serif;
+   font-family: "ChelseaMarket-Regular";
 }
 :root{
    --color1: #747f8a;
@@ -62,7 +65,7 @@ main section:nth-child(1) div img{
 .section-1 div:nth-child(1) p{
    color: var(--color6);
 }
-.section-1 div:nth-child(2){
+.section-1 > div:nth-child(2){
    background-color: var(--color7);
    width: 80%;
    height: 30px;
@@ -70,7 +73,7 @@ main section:nth-child(1) div img{
    padding-top: 3px;
    border-radius: 6px;
    text-align: center;
-   font-size: 20px;
+   font-size: 18px;
    color: var(--color4);
    cursor: grab;
 }
@@ -113,14 +116,13 @@ input{
 }
 .fa-close{
    display: none !important;
-
 }
 .section-1 div:nth-child(3) ul li i{
    font-size: 22px;
    color: var(--color3);
 }
 .section-1 div:nth-child(3) ul span{
-   margin-left: 15px;
+   margin-left: 8px;
 }
 .nav-bar{
    padding: 5px 10px;
@@ -148,11 +150,11 @@ input{
    padding-left: 10px;
    color: grey;
    font-style: italic;
-   font-size: 20px;
+   font-size: 12px;
 }
 .style-foot{
    width: 100%;
-   height: 20%;
+   height: 19%;
 }
 #container-section {
    margin: 1px;
@@ -318,6 +320,7 @@ input{
    justify-content: space-evenly;
    background-color: white;
    border-radius: 6px;
+
 }
 #Billet-entrer td{
    height: 70px;
@@ -452,6 +455,28 @@ video{
  ::-webkit-scrollbar-thumb:hover {
    background: wheat; 
  }
+
+ /*input ajouter*/
+ .input-ajout {
+   position: absolute;
+   top: 0;
+   left: -0.5%;
+   width: 100%;
+   height: 100%;
+   border-radius: 0 !important;
+   display: none !important;
+   justify-content: center !important;
+   align-items: center !important; 
+   
+ }
+ .Filiere{
+   width: auto !important;
+   height: 70% !important;
+ }
+ .inputAddAjout{
+   display: flex !important;
+ }
+
 @media screen and (max-width: 1200px) {
    main{
       width: 100%;
